@@ -1,2 +1,2 @@
 # Arepo
-This is a distributed revision control tool for software developers
+This is a distributed revision control (DVCS) tool for software developers
