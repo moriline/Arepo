@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "org.arepo"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -24,10 +24,10 @@ tasks.test {
     useJUnitPlatform()
 }
 // run Build->jar task
+//1. For building FatJar
 /*
 tasks.withType<Jar>() {
     manifest {
-        //attributes["Main-Class"] = "org.atask.Main"
         attributes["Main-Class"] = "org.arepo.Main"
     }
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
@@ -36,7 +36,7 @@ tasks.withType<Jar>() {
     }
 }
  */
-
+//2. For building jar with dependencies in other directory
 tasks.jar{
     manifest.attributes["Main-Class"] = "org.arepo.Main"
     val dependencies = "deps"
